@@ -13,8 +13,17 @@
 # temperature closest to 0.
 
 
-raw_input()
-m=0
-for t in map(int,raw_input().split()):
-    if(m==0)or(abs(t)<abs(m))or((t==-m)and(t>0)):m=t
-print(m)
+n = int(raw_input())
+temps = raw_input().split(' ')
+try:
+    temp_values = map(int, temps)
+    hot, cold = [t for t in temp_values if t > 0], [
+        t for t in temp_values if t < 0]
+    if not cold:
+        print min(hot)
+    elif not hot:
+        print max(cold)
+    else:
+        print min(hot) > abs(max(cold)) and max(cold) or min(hot)
+except ValueError:
+    print 0
