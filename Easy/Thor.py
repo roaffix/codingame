@@ -9,32 +9,32 @@ while True:
     remaining_turns = int(raw_input())
     if ty == y:
         if tx < x:
-            print "E"
             tx += 1
+            print 'E'
         else:
-            print "W"
             tx -= 1
+            print 'W'
     elif ty > y:
         if tx == x:
-            print "N"
             ty -= 1
+            print 'N'
         elif tx > x:
-            print "NW"
             tx -= 1
             ty -= 1
+            print 'NW'
         else:
-            print "NE"
             tx += 1
             ty -= 1
+            print 'NE'
     elif ty < y:
         if tx == x:
-            print "S"
             ty += 1
+            print 'S'
         elif tx > x:
-            print "SW"
             tx -= 1
             ty += 1
+            print 'SW'
         else:
-            print "SE"
             tx += 1
             ty += 1
+            print 'SE'
