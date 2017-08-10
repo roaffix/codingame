@@ -55,4 +55,4 @@ for i in range(0, len(lines), 1):
         else:
             continue
 
-        print x1 + " " + y1 + " " + x2 + " " + y2 + " " + x3 + " " + y3
+        print "%s %s %s %s %s %s" % (x1, y1, x2, y2, x3, y3)
